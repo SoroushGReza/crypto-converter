@@ -2,6 +2,7 @@ import requests
 from key import EXCHANGERATE_API_KEY
 
 
+# Function to get the USD price of a cryptocurrency
 def get_price(crypto):
     try:
         # Build API URL
@@ -20,3 +21,13 @@ def get_price(crypto):
 
 # Function to get xchange rate between two currencies
 def get_rate(base, target):
+    try:
+        # Build API URL
+        api_url = (
+            f"https://api.exchangerate-api.com/v4/latest/{base}"
+            f"?access_key={EXCHANGERATE_API_KEY}"
+        )
+        # Send request to API
+        response = requests.get(api_url)
+        # Parse responsen as json
+        data = responsen.json()
