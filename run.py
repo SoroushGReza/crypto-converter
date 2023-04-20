@@ -8,15 +8,15 @@ def get_price(crypto):
         # Build API URL
         api_url = (f"https://api.coingecko.com/api/v3/simple/price?"
                    f"ids={crypto}&vs_currencies=usd")
-                   # Send request to API
-                   response = requests.get(api_url)
-                   # Parse response as JSON
-                   data = response.json()
-                   # Return the USD price of the cryptocurrency
-                   return data[crypto]["usd"]
-                except Exception as e:
-                    print(f"Error getting {crypto} price: {e}")
-                    return None
+        # Send request to API
+        response = requests.get(api_url)
+        # Parse response as JSON
+        data = response.json()
+        # Return the USD price of the cryptocurrency
+        return data[crypto]["usd"]
+    except Exception as e:
+        print(f"Error getting {crypto} price: {e}")
+        return None
 
 
 # Function to get xchange rate between two currencies
@@ -27,7 +27,35 @@ def get_rate(base, target):
             f"https://api.exchangerate-api.com/v4/latest/{base}"
             f"?access_key={EXCHANGERATE_API_KEY}"
         )
+
         # Send request to API
         response = requests.get(api_url)
-        # Parse responsen as json
-        data = responsen.json()
+        # Parse response as json
+        data = response.json()  # Fix the variable name here
+        # To return exchange rate between base and target currencies
+        return data["rates"][target]
+    except Exception as e:
+        print(f"Error getting exchange rates: {e}")
+        return None
+
+
+# Function to convert amount using the given exchange rate
+def convert_amount(amount, rate):
+    # Multiply amount by rate and return result
+    return amount * rate
+
+
+# Main loop
+while True:
+    # Print available options
+    print("Choose a cryptocurrency:")
+    print("1. ETH")
+    print("2. GALA")
+
+    # Get user input
+    user_input = input("Enter your choice (1 or 2): ")
+
+    # Check if input is a number 
+    if not user_input.isdigit():
+        print("That's not an option, try agaian.")
+        continue
