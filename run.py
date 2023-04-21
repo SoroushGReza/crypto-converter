@@ -90,3 +90,10 @@ while True:
             print("Only numbers and one '.' allowed, try again.")
             continue
         break
+    # Convert the user input to float
+    crypto_to_convert = float(user_amount)
+
+    # Get exchange rates
+    usd_rate = get_rate("USD", "USD")
+    eur_rate = get_rate("USD", "EUR")
+    sek_rate = get_rate("USD", "SEK")
