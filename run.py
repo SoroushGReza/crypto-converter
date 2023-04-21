@@ -90,6 +90,7 @@ while True:
             print("Only numbers and one '.' allowed, try again.")
             continue
         break
+
     # Convert the user input to float
     crypto_to_convert = float(user_amount)
 
@@ -97,3 +98,11 @@ while True:
     usd_rate = get_rate("USD", "USD")
     eur_rate = get_rate("USD", "EUR")
     sek_rate = get_rate("USD", "SEK")
+
+# Convert the cryptocurrency amout to different currencies
+usd_value = convert_amount(crypto_to_convert, crypto_usd_price * usd_rate)
+eur_value = convert_amount(crypto_to_convert, crypto_usd_price * eur_rate)
+sek_value = convert_amount(crypto_to_convert, crypto_usd_price * sek_rate)
+if usd_value is None or eur_value is None or sek_value is None:
+    print("Can't continue, due to errors.")
+
