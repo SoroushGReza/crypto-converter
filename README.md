@@ -5,7 +5,9 @@
 ### 3. [Installation](#installation)
 ### 4. [How To Use](#how-to-use)
 ### 5. [Credits](#credits)
-### 6. [Deployment](#deployment) <br> <br>
+### 6. [Deployment](#deployment) 
+### 7. [Design Choices](#design-choices) 
+### 8. [Improvements](#improvements) <br> <br>
 
 # [About](#about)
 ### This program is a simple tool to convert Ethereum (ETH) and Gala (GALA) into USD, EUR and SEK. This is a tool for people that want up-to-date exchange rates for better decision-making. Due to lack of time, the options of crypto currencies is kept to minimum.  <br> <br>
@@ -39,5 +41,18 @@
 
 ### - This project uses the [Exchange Rate API](https://www.exchangerate-api.com/) for exchange rates. <br><br>
 
+### The "**requests**" library helps send HTTP requests. Learn more [here](https://docs.python-requests.org/en/latest/) <br> <br>
+
 
 # [Deployment](#deployment)
+
+# [Design Choices](#design-choices)
+### - This tool uses a simple text interface, making it easy to use and work on many systems. <br> <br>
+### - The tool handles erros to help the tool to recover from issues, like if the user input is invalid, or API issues. <br><br>
+
+# [Improvements](#improvements)
+### **Here are some ideas for future adjustments that could improve user experience.** <br> <br>
+
+### 1. **Support more cryptocurrencies:** Expand the tool to support additional cryptocurrencies. That will make it more useful to wider range of users. <br><br>
+
+### 2. **Flexibility:** Add possibility to convert crypto-to-crypto rates.
