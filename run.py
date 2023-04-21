@@ -85,24 +85,29 @@ while True:
             user_amount = input(
                 f"Enter amount of "
                 f"{crypto_name} to convert: "
-            )
-        if not user_amount.replace(".", "", 1).isdigit():
-            print("Only numbers and one '.' allowed, try again.")
-            continue
-        break
+                )
+            if not user_amount.replace(".", "", 1).isdigit():
+                print("Only numbers and one '.' allowed, try again.")
+                continue
+            break
 
-    # Convert the user input to float
-    crypto_to_convert = float(user_amount)
+        # Convert the user input to float
+        crypto_to_convert = float(user_amount)
 
-    # Get exchange rates
-    usd_rate = get_rate("USD", "USD")
-    eur_rate = get_rate("USD", "EUR")
-    sek_rate = get_rate("USD", "SEK")
+        # Get exchange rates
+        usd_rate = get_rate("USD", "USD")
+        eur_rate = get_rate("USD", "EUR")
+        sek_rate = get_rate("USD", "SEK")
 
-# Convert the cryptocurrency amout to different currencies
-usd_value = convert_amount(crypto_to_convert, crypto_usd_price * usd_rate)
-eur_value = convert_amount(crypto_to_convert, crypto_usd_price * eur_rate)
-sek_value = convert_amount(crypto_to_convert, crypto_usd_price * sek_rate)
-if usd_value is None or eur_value is None or sek_value is None:
-    print("Can't continue, due to errors.")
-
+    # Convert the cryptocurrency amout to different currencies
+    usd_value = convert_amount(crypto_to_convert, crypto_usd_price * usd_rate)
+    eur_value = convert_amount(crypto_to_convert, crypto_usd_price * eur_rate)
+    sek_value = convert_amount(crypto_to_convert, crypto_usd_price * sek_rate)
+    if usd_value is None or eur_value is None or sek_value is None:
+        print("Can't continue, due to errors.")
+    else:
+        # Print the converted values
+        print(f"{crypto_to_convert} {crypto_name} is equal to: ")
+        print(f"{usd_value: .2f} USD")
+        print(f"{eur_value: .2f} EUR")
+        print(f"{sek_value: .2f} SEK")
