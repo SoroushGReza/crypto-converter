@@ -73,3 +73,20 @@ while True:
     else:
         print("Not an option, try again.")
         continue
+
+    # Get cryptocurrency price in USD 
+    crypto_usd_price = get_price(crypto_id)
+
+    if crypto_usd_price is None:
+        print("Can't continue due to errors.")
+    else:
+        while True:
+            # Get amount of cryptocurrency to convert
+            user_amount = input(
+                f"Enter amount of "
+                f"{crypto_name} to convert: "
+            )
+        if not user_amount.replace(".", "", 1).isdigit():
+            print("Only numbers and one '.' allowed, try again.")
+            continue
+        break
