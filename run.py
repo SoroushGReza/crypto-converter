@@ -59,3 +59,17 @@ while True:
     if not user_input.isdigit():
         print("That's not an option, try agaian.")
         continue
+
+    # Convert user input an integer
+    user_choice = int(user_input)
+
+    # Set crypto based on user choice
+    if user_choice == 1:
+        crypto_name = "ETH"
+        crypto_id = "ethereum"
+    elif user_choice == 2:
+        crypto_name = "GALA"
+        crypto_id = "gala"
+    else:
+        print("Not an option, try again.")
+        continue
