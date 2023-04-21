@@ -1,31 +1,35 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Crypto converter
+## Table of contents
+### 1. [About](#about)
+### 2. [Needed Tools](#needed-tools)
+### 3. [Installation](#installation)
+### 4. [How To Use](#how-to-use)
+### 5. [Credits](#credits)
+### 6. [Deployment](#deployment) <br> <br>
 
-Welcome SoroushGReza,
+# [About](#about)
+### This program is a simple tool to convert Ethereum (ETH) and Gala (GALA) into USD, EUR and SEK. This is a tool for people that want up to date exchange rates for better decision-making. Due to lack of time, the options of crypto currencies is kept to minimum. <br> <br>
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+# [Needed Tools](#needed-tools)
+## To use this program, make sure you have: 
+### - Python 3.x
+### - "requests" library <br> <br>
 
-## Reminders
+# [Installation](#installation)
+## Setting Up 
+### 1. Download the project files or clone the repository. <br> <br>
+### 2. Install Python packages with this command in the terminal: <br> 
+![screentshot of pip installation](./assets/images/pipimg.png)
+#### (In this example, we are using GitPod) <br> <br>
+### 3. Get an API key for the Exchange Rate API by signing up [here](https://www.exchangerate-api.com/). <br> <br>
+### 4. Make a file named "key.py" in the project folder. <br><br>
+### 5. Add this line to the file: <br>
+### **"EXCHANGERATE_API_KEY = "<YOUR_API_KEY>"** <br><br>
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+# [How To Use](#how-to-use)
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# [Credits](#credits)
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+# [Deployment](#deployment)
