@@ -15,7 +15,7 @@ def get_price(crypto):
         # Return the USD price of the cryptocurrency
         return data[crypto]["usd"]
     except Exception as e:
-        print(f"Error getting {crypto} price: {e}")
+        print(f"\nError getting {crypto} price: {e}\n")
         return None
 
 
@@ -35,7 +35,7 @@ def get_rate(base, target):
         # To return exchange rate between base and target currencies
         return data["rates"][target]
     except Exception as e:
-        print(f"Error getting exchange rates: {e}")
+        print(f"\nError getting exchange rates: {e}\n")
         return None
 
 
@@ -48,16 +48,16 @@ def convert_amount(amount, rate):
 # Main loop
 while True:
     # Print available options
-    print("Choose a cryptocurrency:")
+    print("\nChoose a cryptocurrency:\n")
     print("1. ETH")
     print("2. GALA")
 
     # Get user input
-    user_input = input("Enter your choice (1 or 2): ")
+    user_input = input("\nEnter your choice (1 or 2): \n")
 
     # Check if input is a number 
     if not user_input.isdigit():
-        print("That's not an option, try agaian.")
+        print("\nThat's not an option, try agaian.\n")
         continue
 
     # Convert user input an integer
@@ -71,23 +71,23 @@ while True:
         crypto_name = "GALA"
         crypto_id = "gala"
     else:
-        print("Not an option, try again.")
+        print("\nNot possible.\n")
         continue
 
     # Get cryptocurrency price in USD 
     crypto_usd_price = get_price(crypto_id)
 
     if crypto_usd_price is None:
-        print("Can't continue due to errors.")
+        print("\nCan't continue due to errors.\n")
     else:
         while True:
             # Get amount of cryptocurrency to convert
             user_amount = input(
-                f"Enter amount of "
-                f"{crypto_name} to convert: "
+                f"\nEnter amount of "
+                f"{crypto_name} to convert: \n"
                 )
             if not user_amount.replace(".", "", 1).isdigit():
-                print("Only numbers and one '.' allowed, try again.")
+                print("\nOnly numbers and one '.' allowed, try again.\n")
                 continue
             break
 
@@ -104,10 +104,10 @@ while True:
     eur_value = convert_amount(crypto_to_convert, crypto_usd_price * eur_rate)
     sek_value = convert_amount(crypto_to_convert, crypto_usd_price * sek_rate)
     if usd_value is None or eur_value is None or sek_value is None:
-        print("Can't continue, due to errors.")
+        print("\nCan't continue, due to errors.\n")
     else:
         # Print the converted values
-        print(f"{crypto_to_convert} {crypto_name} is equal to: ")
-        print(f"{usd_value: .2f} USD")
-        print(f"{eur_value: .2f} EUR")
-        print(f"{sek_value: .2f} SEK")
+        print(f"\n{crypto_to_convert} {crypto_name} is equal to:\n ")
+        print(f"{usd_value: .2f} USD\n")
+        print(f"{eur_value: .2f} EUR\n")
+        print(f"{sek_value: .2f} SEK\n")
