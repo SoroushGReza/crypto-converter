@@ -75,6 +75,13 @@
 
 Whitespaces deleted - Code passed without any syntax errors.<br><br> 
 
+# Errors
+## Fixed
+* I got several errors ("line too long") during the building of this project. I shortened the lines errors pointed out to fix them.
+* I also got a few errors for indentation issues. I located and solved the issues. <br><br>  
+## Remaining Errors
+* None <br><br>
+
 # [Credits](#credits)
 ## Author
 ### This program is written by [Soroush G](https://www.linkedin.com/in/soroush-gholamreza-599173250/) <br><br>
