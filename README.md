@@ -9,7 +9,7 @@
 ### 7. [Deployment](#deployment) 
 ### 8. [Design Choices](#design-choices) 
 ### 9. [Improvements](#improvements) <br>
-### 10. [User Stories](#user-stories) <br>
+### 10. [User Stories](#user-stories) <br><br>
 
 # [About](#about)
 ### This program is a simple tool to convert Ethereum (ETH) and Gala (GALA) into USD, EUR and SEK. This is a tool for people that want up-to-date exchange rates for better decision-making. Due to lack of time, the options of crypto currencies is kept to minimum.  <br> <br>
