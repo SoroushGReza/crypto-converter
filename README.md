@@ -3,7 +3,7 @@
 ### 1. [About](#about)
 ### 2. [Needed Tools](#needed-tools)
 ### 3. [Installation](#installation)
-### 4. [How To Use](#how-to-use)
+### 4. [Testing](#testing)
 ### 5. [Credits](#credits)
 ### 6. [Deployment](#deployment) 
 ### 7. [Design Choices](#design-choices) 
@@ -29,11 +29,39 @@
 ### **EXCHANGERATE_API_KEY = "<YOUR_API_KEY>"** <br> <br>
 ### 6.  You will replace the "<YOUR_API_KEY>" with your **actual** API key <br><br>
 
-# [How To Use](#how-to-use)
+# [Testing](#testing)
 ### 1. Run the main script like this:
-## **python <path_to_script>/cryptocurrency_converter.py** <br> <br>
-### 2. Replace "<path_to_script>" with the **actual** path to you script. <br> <br>
-### 3. Follow the steps to pick a cryptocurrency, type the amount you want to change, and see the results in USD, EUR, and SEK. <br><br>
+### **python3 run.py**
+##### (Note: If you are using a lower version than Python 3.x, you may need to use **"python"** instead of **"python3"**) <br> <br>
+### 2. Replace "run.py" with your **actual** file name.
+### 3. Choose a cryptocurrency 
+
+![screenshot-1 choose a cryptocurrency](./assets/images/step1.png)
+##### In this case we chose option 2, that is "GALA". <br><br>
+
+### 4. Make sure to enter only **digits** and to only use the numbers that is a choice. In this case "1" and "2". <br><br>
+
+
+### **Otherwise:**
+![screenshot-tryagain1](./assets/images/tryagain1.png)
+##### In this case user tried to choose "GALA" by writing "two" with letters. <br><br>
+
+### 5. After choosing cryptocurrency to convert, you will be asked to enter the amount to be converted. 
+![screenshot2 enter - amount to convert](./assets/images/step2.png)
+##### Make sure to use a dot for entering decimals. <br><br>
+
+### 6. The amount of the cryptocurrency you chose will now be converted to the currencies USD, EURO and SEK.
+![screenshot3 - converted amount printed](./assets/images/step3.png)
+##### As you can the the amount have been converted using the APIs to get up-to-date rates. Now the program will continue to ask for a new choice to convert, to avoid for the user to need to start the program again after each conversion. <br><br>
+
+### 7. Make sure to only enter digits, and to separate whole numbers and decimals using a dot (.). <br><br>
+
+### **Otherwise:**
+![screenshot-tryagain2](./assets/images/tryagain2.png)
+##### It will lead to an error saying "Only numbers allowed, try again."
+
+
+<br><br>
 
 
 # [Credits](#credits)
@@ -45,7 +73,7 @@
 
 ### [Exchange Rate API](https://www.exchangerate-api.com/) - This project uses the Exchange Rate API for exchange rates. <br><br>
 
-### **Requests** The "**requests**" library helps send HTTP requests. Learn more [here](https://docs.python-requests.org/en/latest/) <br> <br>
+### [Requests](https://docs.python-requests.org/en/latest/) - The "**requests**" library helps send HTTP requests. <br> <br>
 
 
 # [Deployment](#deployment)

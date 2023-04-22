@@ -87,7 +87,7 @@ while True:
                 f"{crypto_name} to convert: \n"
                 )
             if not user_amount.replace(".", "", 1).isdigit():
-                print("\nOnly numbers and one '.' allowed, try again.\n")
+                print("\nOnly numbers allowed, try again.\n")
                 continue
             break
 
