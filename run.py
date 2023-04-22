@@ -1,5 +1,9 @@
 import requests
-from key import EXCHANGERATE_API_KEY
+import os
+try:
+    from key import EXCHANGERATE_API_KEY
+except Exception:
+    EXCHANGERATE_API_KEY = os.environ.get('EXCHANGERATE_API_KEY')
 
 
 # Function to get the USD price of a cryptocurrency
