@@ -62,6 +62,9 @@
 ![screenshot-tryagain2](./assets/images/tryagain2.png)
 ##### It will lead to an error saying "Only numbers allowed, try again." <br><br>
 
+## Building the CoinGecko API URL <br>
+### To build the CoinGecko API link just follow the steps provided in this link: [CoinGecko API](https://www.coingecko.com/en/api/documentation)<br><br>
+
 # [Validation](#validation)
 ### This code was validated using two validation sources <br>
 * https://pep8ci.herokuapp.com/<br>
@@ -70,8 +73,7 @@
 
 #### The validation showed two syntax errors. (Trailing white space on line 58 and 77.) <br><br> 
 
-Whitespaces deleted - Code passed without any syntax errors. 
-
+Whitespaces deleted - Code passed without any syntax errors.<br><br> 
 
 # [Credits](#credits)
 ## Author
@@ -84,13 +86,46 @@ Whitespaces deleted - Code passed without any syntax errors.
 
 ### [Requests](https://docs.python-requests.org/en/latest/) - The "**requests**" library helps send HTTP requests. <br> <br>
 
-### The code validation was made in: <br>
-* https://pep8ci.herokuapp.com/# <br>
-and <br>
-* [Extend Class](https://extendsclass.com/python-tester.html) <br><br>
+## The code validation was made in: <br>
+### - https://pep8ci.herokuapp.com/# <br>
+
+### - [Extend Class](https://extendsclass.com/python-tester.html) <br><br>
 
 
 # [Deployment](#deployment)
+## Deployment to Heroku through GitHub <br><br>
+### 1. Login to you Heroku acount. If you dont have one, create one [here](https://signup.heroku.com/). <br><br>
+### 2. Once logged in, press the **"New"** button.<br><br>
+
+### 3. Press **"Create new app"**. <br><br>
+
+### 4. Choose your app-name, your region, and press **"Create app"** <br><br>
+
+### 5. Once the app has been created,locate the **"Settings"** tab in the page. <br><br>
+
+### 6. Scroll down ans press **"Reveal Config Vars"**.<br><br>
+
+### 7. Press **"Add"** > Paste in: **"EXCHANGERATE_API_KEY"** in the **"KEY"** input.<br><br>
+
+### 8. Paste in you actual API key into the **"VALUE"** input, and then press **"ADD"**<br><br>
+
+### 9. Below the "Config Vars" press the **"Add buildpack"** button.<br><br>
+
+### 10. Choose **"python"** and then press **"Save changes"** <br><br>
+
+### 11. Press **"Add buildpack"** again, this time choose **"nodejs"** then press **"Save changes"**.<br><br>
+
+### 12. Scroll up and locate the **"Deploy"** tab and press it. <br><br>
+
+### 13. In "Deployment method" press on the GitHub logo.<br><br>
+
+### 14. Now earch for the repository name and then press **"Connect"**.<br><br>
+
+### 15. Once the repo is connected, scroll down to the bottom of the page to "Manual deploy". <br><br>
+
+### 16. Make sure to choose **"Main"** as branch and then press **"Deploy Branch"** button. <br><br>
+
+### 17. Once the deployment is done, you can view it and try it out. <br><br>
 
 # [Design Choices](#design-choices)
 ### - This tool uses a simple text interface, making it easy to use and work on many systems. <br> <br>
