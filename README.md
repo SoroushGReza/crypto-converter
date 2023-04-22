@@ -4,11 +4,12 @@
 ### 2. [Needed Tools](#needed-tools)
 ### 3. [Installation](#installation)
 ### 4. [Testing](#testing)
-### 5. [Credits](#credits)
-### 6. [Deployment](#deployment) 
-### 7. [Design Choices](#design-choices) 
-### 8. [Improvements](#improvements) <br>
-### 9. [User Stories](#user-stories) <br>
+### 5. [Validation](#validation)
+### 6. [Credits](#credits)
+### 7. [Deployment](#deployment) 
+### 8. [Design Choices](#design-choices) 
+### 9. [Improvements](#improvements) <br>
+### 10. [User Stories](#user-stories) <br>
 
 # [About](#about)
 ### This program is a simple tool to convert Ethereum (ETH) and Gala (GALA) into USD, EUR and SEK. This is a tool for people that want up-to-date exchange rates for better decision-making. Due to lack of time, the options of crypto currencies is kept to minimum.  <br> <br>
@@ -59,10 +60,17 @@
 
 ### **Otherwise:**
 ![screenshot-tryagain2](./assets/images/tryagain2.png)
-##### It will lead to an error saying "Only numbers allowed, try again."
+##### It will lead to an error saying "Only numbers allowed, try again." <br><br>
 
+# [Validation](#validation)
+### This code was validated using two validation sources <br>
+* https://pep8ci.herokuapp.com/<br>
 
-<br><br>
+* https://extendsclass.com/python-tester.html <br>
+
+#### The validation showed two syntax errors. (Trailing white space on line 58 and 77.) <br><br> 
+
+Whitespaces deleted - Code passed without any syntax errors. 
 
 
 # [Credits](#credits)
@@ -75,6 +83,11 @@
 ### [Exchange Rate API](https://www.exchangerate-api.com/) - This project uses the Exchange Rate API for exchange rates. <br><br>
 
 ### [Requests](https://docs.python-requests.org/en/latest/) - The "**requests**" library helps send HTTP requests. <br> <br>
+
+### The code validation was made in: <br>
+* https://pep8ci.herokuapp.com/# <br>
+and <br>
+* [Extend Class](https://extendsclass.com/python-tester.html) <br><br>
 
 
 # [Deployment](#deployment)

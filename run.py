@@ -55,7 +55,7 @@ while True:
     # Get user input
     user_input = input("\nEnter your choice (1 or 2): \n")
 
-    # Check if input is a number 
+    # Check if input is a number
     if not user_input.isdigit():
         print("\nThat's not an option, try agaian.\n")
         continue
@@ -74,7 +74,7 @@ while True:
         print("\nNot possible.\n")
         continue
 
-    # Get cryptocurrency price in USD 
+    # Get cryptocurrency price in USD
     crypto_usd_price = get_price(crypto_id)
 
     if crypto_usd_price is None:
