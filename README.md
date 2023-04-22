@@ -1,6 +1,9 @@
 # Crypto converter
-### Direct link to GitHub [repository](https://github.com/SoroushGReza/crypto-converter) <br><br>
-## Table of contents
+### Live [link](https://crypto-converter23.herokuapp.com) to project
+### Direct link to GitHub [repository](https://github.com/SoroushGReza/crypto-converter) 
+ <br>
+ 
+# Table of contents
 ### 1. [About](#about)
 ### 2. [Needed Tools](#needed-tools)
 ### 3. [Installation](#installation)
