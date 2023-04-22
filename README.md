@@ -7,7 +7,8 @@
 ### 5. [Credits](#credits)
 ### 6. [Deployment](#deployment) 
 ### 7. [Design Choices](#design-choices) 
-### 8. [Improvements](#improvements) <br> <br>
+### 8. [Improvements](#improvements) <br>
+### 9. [User Stories](#user-stories) <br>
 
 # [About](#about)
 ### This program is a simple tool to convert Ethereum (ETH) and Gala (GALA) into USD, EUR and SEK. This is a tool for people that want up-to-date exchange rates for better decision-making. Due to lack of time, the options of crypto currencies is kept to minimum.  <br> <br>
@@ -87,4 +88,28 @@
 
 ### 1. **Support more cryptocurrencies:** Expand the tool to support additional cryptocurrencies. That will make it more useful to wider range of users. <br><br>
 
-### 2. **Flexibility:** Add possibility to convert crypto-to-crypto rates.
+### 2. **Flexibility:** Add possibility to convert crypto-to-crypto rates. <br><br>
+
+# [User Stories](#user-stories)
+## As a user I want to be able to: <br><br>
+### ☑ See a list of available cryptocurrencies I can choose from for conversion. <br><br>
+
+### ☑ Enter my choice from the given list, so the conversion process can get started. <br><br>
+
+### ☑ Input the amount that I want to convert. <br><br>
+
+### ☑ See an error message if I input invalid number or choice, so that I can correct my input. <br><br>
+
+### ☑ Rely on the program to fetch the current exchange rates between USD and other currencies (EUR, SEK). <br><br>
+
+### ☑ Rely on the program to fetch the current price of chosen cryptocurrency in USD so that the conversion is made with up-to-date data.<br><br>
+
+### ☑ See converted amount of the chosen cryptocurrency in USD, EUR and SEK, to understand the value of different currencies.<br><br>
+
+### ☑ See an error if there is any issue fetching the cryptocurrency price or exchange rates so that I can be aware of the problem.<br><br>
+
+### ☐ See real-time rates and prices, that is more precise than just up-to-date.<br><br>
+
+## ☑ = User stories satisfied<br>
+## ☐ = Need further steps to satisfy
+
