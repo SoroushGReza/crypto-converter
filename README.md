@@ -16,8 +16,8 @@
 
 # [Needed Tools](#needed-tools)
 ## To use this program, make sure you have: 
-### - Python 3.x
-### - "requests" library <br> <br>
+* Python 3.x
+*  "requests" library <br> <br>
 
 # [Installation](#installation)
 ## Follow this steps:

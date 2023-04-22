@@ -8,6 +8,9 @@ except Exception:
 
 # Function to get the USD price of a cryptocurrency
 def get_price(crypto):
+    """
+    Return the USD price of given crypto, or None if error occurs
+    """
     try:
         # Build API URL
         api_url = (f"https://api.coingecko.com/api/v3/simple/price?"
@@ -25,6 +28,9 @@ def get_price(crypto):
 
 # Function to get xchange rate between two currencies
 def get_rate(base, target):
+    """
+    Return exchange rate between two currencies and None if an error occurs
+    """
     try:
         # Build API URL
         api_url = (
@@ -45,12 +51,18 @@ def get_rate(base, target):
 
 # Function to convert amount using the given exchange rate
 def convert_amount(amount, rate):
+    """ 
+    Convert amount using a given exchange rate and return the result
+    """
     # Multiply amount by rate and return result
     return amount * rate
 
 
 # Main loop
 while True:
+    """
+    Main loop handling user input, crypto choice & conversion to currencies
+    """
     # Print available options
     print("\nChoose a cryptocurrency:\n")
     print("1. ETH")
