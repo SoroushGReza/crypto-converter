@@ -37,11 +37,15 @@
 
 
 # [Credits](#credits)
-### - This project uses the [CoinGecko API](https://www.coingecko.com/en/api/documentation) for cryptocurrency prices. <br><br>
+## Author
+### This program is written by [Soroush G](https://www.linkedin.com/in/soroush-gholamreza-599173250/) <br><br>
 
-### - This project uses the [Exchange Rate API](https://www.exchangerate-api.com/) for exchange rates. <br><br>
+## Special thanks to 
+### [CoinGecko](https://www.coingecko.com/) - This project uses the [CoinGecko API](https://www.coingecko.com/en/api/documentation) for cryptocurrency prices. <br><br>
 
-### The "**requests**" library helps send HTTP requests. Learn more [here](https://docs.python-requests.org/en/latest/) <br> <br>
+### [Exchange Rate API](https://www.exchangerate-api.com/) - This project uses the Exchange Rate API for exchange rates. <br><br>
+
+### **Requests** The "**requests**" library helps send HTTP requests. Learn more [here](https://docs.python-requests.org/en/latest/) <br> <br>
 
 
 # [Deployment](#deployment)
