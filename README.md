@@ -1,4 +1,5 @@
 # Crypto converter
+### Direct link to GitHub [repository](https://github.com/SoroushGReza/crypto-converter) <br><br>
 ## Table of contents
 ### 1. [About](#about)
 ### 2. [Needed Tools](#needed-tools)
