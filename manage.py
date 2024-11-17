@@ -2,6 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from pathlib import Path
+
+# Ladda env.py om den finns
+BASE_DIR = Path(__file__).resolve().parent
+env_file = BASE_DIR / "env.py"
+if env_file.exists():
+    exec(open(env_file).read())
 
 
 def main():

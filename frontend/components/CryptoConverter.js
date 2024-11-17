@@ -28,13 +28,25 @@ const CryptoConverter = () => {
         const response = await axios.get(
           "https://crypto-converter-app-372f4b2b2eda.herokuapp.com/api/cryptos/"
         );
+
+        // Matcha ikoner till cryptocurrencies
+        const icons = {
+          BTC: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
+          ETH: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+          SOL: "https://cryptologos.cc/logos/solana-sol-logo.png",
+          ADA: "https://cryptologos.cc/logos/cardano-ada-logo.png",
+          DOGE: "https://cryptologos.cc/logos/dogecoin-doge-logo.png",
+        };
+
+        // Lägg till ikoner direkt i objektet
         const updatedCryptos = response.data.map((crypto) => ({
           ...crypto,
-          icon: getCryptoIcon(crypto.symbol),
+          icon: icons[crypto.symbol] || null, // Lägg till icon-fältet
         }));
+
         setCryptos(updatedCryptos);
       } catch (err) {
-        console.log("Error fetching cryptocurrencies:", err);
+        console.error("Error fetching cryptocurrencies:", err);
         setError("Failed to load cryptocurrencies. Please try again later.");
       }
     };
@@ -49,7 +61,6 @@ const CryptoConverter = () => {
       );
       setResult(response.data);
     } catch (err) {
-      console.log("Error fetching conversion:", err);
       setError(
         "Error fetching data. Please check the cryptocurrency or amount."
       );
@@ -102,11 +113,11 @@ const CryptoConverter = () => {
         {crypto && (
           <View style={styles.cryptoInfo}>
             <Image
-              source={{ uri: cryptos.find((c) => c.symbol === crypto).icon }}
+              source={{ uri: cryptos.find((c) => c.symbol === crypto)?.icon }}
               style={styles.icon}
             />
             <Text style={styles.selectedCrypto}>
-              Selected: {cryptos.find((c) => c.symbol === crypto).name}
+              Selected: {cryptos.find((c) => c.symbol === crypto)?.name}
             </Text>
           </View>
         )}
@@ -216,6 +227,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     marginRight: 10,
+    marginHorizontal: 10,
   },
   selectedCrypto: {
     fontSize: 16,
@@ -270,9 +282,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-  },
-  icon: {
-    marginHorizontal: 10,
   },
 });
 
