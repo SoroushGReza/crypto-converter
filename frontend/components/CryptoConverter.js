@@ -26,7 +26,7 @@ const CryptoConverter = () => {
     const fetchCryptos = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.1.5:8000/api/cryptos/"
+          "https://crypto-converter-app-372f4b2b2eda.herokuapp.com/api/cryptos/"
         );
         const updatedCryptos = response.data.map((crypto) => ({
           ...crypto,
@@ -45,7 +45,7 @@ const CryptoConverter = () => {
     try {
       setError("");
       const response = await axios.get(
-        `http://192.168.1.5:8000/api/convert/${crypto}?amount=${amount}`
+        `https://crypto-converter-app-372f4b2b2eda.herokuapp.com/api/convert/${crypto}?amount=${amount}`
       );
       setResult(response.data);
     } catch (err) {
