@@ -15,10 +15,17 @@ dotenv.load_dotenv(os.path.join(BASE_DIR, "env.py"))
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = os.environ.get("DEBUG", "0") == "1"
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = [
+    os.environ.get("ALLOWED_HOST"),
+    "localhost",
+]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8081",
+    "https://crypto-converter-app-372f4b2b2eda.herokuapp.com",
+]
 
 # Application definition
 
@@ -117,18 +124,13 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend", "build")]
+
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://crypto-converter-app-372f4b2b2eda.herokuapp.com"
-]
 
